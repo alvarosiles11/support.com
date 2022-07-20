@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"
+      integrity="sha512-YzwGgFdO1NQw1CZkPoGyRkEnUTxPSbGWXvGiXrWk8IeSqdyci0dEDYdLLjMxq1zCoU0QBa4kHAFiRhUL3z2bow=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>about</title>
+    <style>
+      .parent {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      }
+
+      .box {
+        background-color: transparent;
+        border: 1px solid #ccc;
+        /* border-radius: 16px; */
+        height: "80px";
+        align-items: center;
+        justify-content: center;
+        /* object-fit: cover; */
+        /* object-fit: contain; */
+        display: flex;
+      }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body class="container">
+    <br />
+    <div id="title" class="center"></div>
+    <script>
+      const text = [
+        {
+          grupo: 'Mobile',
+          title: 'XCode',
+          foto: 'https://cdn.ourcodeworld.com/public-media/gallery/gallery-5e20b927dddae.webp',
+          link: 'https://XCode.com',
+        },
+        {
+          grupo: 'Mobile',
+          title: 'Android Studio',
+          foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png',
+          link: 'https://developer.android.com/studio?hl=es-419',
+        },
+        {
+          grupo: 'Mobile',
+          title: 'nativescript',
+          foto: 'https://iconape.com/wp-content/png_logo_vector/nativescript-logo.png',
+          link: 'https://nativescript',
+        },
+        {
+          grupo: 'Mobile',
+          title: 'react-native',
+          foto: 'https://seeklogo.com/images/R/react-native-logo-221C671C70-seeklogo.com.png',
+          link: 'https://react-native',
+        },
+        {
+          grupo: 'Backend',
+          title: 'Java',
+          foto: 'https://profilinator.rishav.dev/skills-assets/java-original-wordmark.svg',
+        },
+        {
+          grupo: 'Backend',
+          title: 'Maven',
+          foto: 'https://editorconfig.org/logos/maven.png',
+          link: 'https://www.Maven.com/',
+        },
+        {
+          grupo: 'Backend',
+          title: 'python',
+          foto: 'https://profilinator.rishav.dev/skills-assets/python-original.svg',
+          link: 'https://www.python.com/',
+        },
+        {
+          grupo: 'Backend',
+          title: 'Php',
+          foto: 'https://profilinator.rishav.dev/skills-assets/php-original.svg',
+          link: 'https://www.php.net/manual/es/tutorial.firstpage.php',
+        },
+        {
+          grupo: 'Backend',
+          title: 'C',
+          foto: 'https://profilinator.rishav.dev/skills-assets/c-original.svg',
+          link: 'https://C',
+        },
+        {
+          grupo: 'Backend',
+          title: 'C++',
+          foto: 'https://profilinator.rishav.dev/skills-assets/cplusplus-original.svg',
+          link: 'https://www.C++',
+        },
+        {
+          grupo: 'Backend',
+          title: 'C#',
+          foto: 'https://profilinator.rishav.dev/skills-assets/csharp-original.svg',
+          link: 'https://www.C#',
+        },
+        {
+          grupo: 'Backend',
+          title: 'Embarcadero rad studio delphi',
+          foto: 'https://community.embarcadero.com/uploads/29831/RX.png',
+          link: 'https://www.embarcadero.com',
+        },
+        {
+          grupo: 'Backend',
+          title: 'Node.js',
+          foto: 'https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg',
+          link: 'https://nodejs.org/es/download/',
+        },
+        {
+          grupo: 'Backend',
+          title: 'springio',
+          foto: 'https://profilinator.rishav.dev/skills-assets/springio-icon.svg',
+          link: 'https://springio/',
+        },
+        {
+          grupo: 'Backend',
+          title: 'scala',
+          foto: 'https://profilinator.rishav.dev/skills-assets/scala-original-wordmark.svg',
+          link: 'https://scala/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'HTML5',
+          foto: 'https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg',
+          link: 'https://lenguajehtml.com/html/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'css3',
+          foto: 'https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg',
+          link: 'https://css3.com/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'bootstrap',
+          foto: 'https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg',
+          link: 'https://bootstrap.com/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'jquery',
+          foto: 'https://profilinator.rishav.dev/skills-assets/jquery.png',
+          link: 'https://jquery.com/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'JavaScript',
+          foto: 'https://profilinator.rishav.dev/skills-assets/javascript-original.svg',
+          link: 'https://www.javascript.com/learn/strings',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'Typescript',
+          foto: 'https://profilinator.rishav.dev/skills-assets/typescript-original.svg',
+          link: 'https://www.typescriptlang.org/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'Angular',
+          foto: 'https://profilinator.rishav.dev/skills-assets/angularjs-original.svg',
+          link: 'https://angular.io/tutorial/toh-pt0',
+        },
+        // {
+        //   grupo: "Frontend",
+        //   title: "Angular.JS",
+        //   foto: "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg",
+        //   link: "https://angular.io/tutorial/toh-pt0",
+        // },
+        {
+          grupo: 'Frontend',
+          title: 'React',
+          foto: 'https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg',
+          link: 'https://reactjs.org/',
+        },
+
+        {
+          grupo: 'Frontend',
+          title: 'Vue',
+          foto: 'https://profilinator.rishav.dev/skills-assets/vuejs-original-wordmark.svg',
+          link: 'https://Vue.com/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'redux',
+          foto: 'https://profilinator.rishav.dev/skills-assets/redux-original.svg',
+          link: 'https://redux.org/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'ember',
+          foto: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg',
+          link: 'https://ember',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'mdbootstrap',
+          foto: 'https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp',
+          link: 'https://mdbootstrap.com/',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'Servisofts',
+          foto: 'https://avatars.githubusercontent.com/u/69025139?v=4',
+          link: 'https://www.npmjs.com/package/servisofts-component',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'canvasjs',
+          foto: 'https://raw.githubusercontent.com/Hardik0307/Hardik0307/master/assets/canvasjs-charts.svg',
+          link: 'https://www.canvasjs',
+        },
+        {
+          grupo: 'Frontend',
+          title: 'chartjs',
+          foto: 'https://www.chartjs.org/media/logo-title.svg',
+          link: 'https://www.chartjs',
+        },
+        {
+          grupo: 'Database',
+          title: 'MySQL',
+          foto: 'https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg',
+          link: 'https://dev.mysql.com/downloads/mysql/',
+        },
+        {
+          grupo: 'Database',
+          title: 'Microsoft SQL Server',
+          foto: 'https://cdn-icons-png.flaticon.com/512/5968/5968364.png',
+          link: 'https://www.microsoft.com/en-us/sql-server/sql-server-downloads',
+        },
+        {
+          grupo: 'Database',
+          title: 'Postgresql',
+          foto: 'https://profilinator.rishav.dev/skills-assets/postgresql-original-wordmark.svg',
+          link: 'https://www.enterprisedb.com/downloads/postgres-postgresql-downloads',
+        },
+        {
+          grupo: 'Database',
+          title: 'Oracle',
+          foto: 'https://profilinator.rishav.dev/skills-assets/oracle-original.svg',
+          link: 'https://www.oracle.com/database/technologies/oracle-database-software-downloads.html',
+        },
+        {
+          grupo: 'Database',
+          title: 'Firebase',
+          foto: 'https://profilinator.rishav.dev/skills-assets/firebase.png',
+          link: 'https://firebase.google.com/docs?hl=es-419&gclsrc=ds&gclsrc=ds&gclid=CI3rkezHsfgCFckNrQYd6FMDJA',
+        },
+        {
+          grupo: 'Database',
+          title: 'MongoDB',
+          foto: 'https://profilinator.rishav.dev/skills-assets/mongodb-original-wordmark.svg',
+          link: 'https://www.mongodb.com/try/download/community',
+        },
+        {
+          grupo: 'Database',
+          title: 'sqlite',
+          foto: 'https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg',
+          link: 'https://www.sqlite',
+        },
+        {
+          grupo: 'VCS',
+          title: 'Git',
+          foto: 'https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg',
+          link: 'https://git-scm.com/downloads',
+        },
+        {
+          grupo: 'VCS',
+          title: 'GitHub',
+          foto: 'https://desktop.github.com/images/desktop-icon.svg',
+          link: 'https://desktop.github.com/',
+        },
+        {
+          grupo: 'VCS',
+          title: 'Gitlab',
+          foto: 'https://profilinator.rishav.dev/skills-assets/gitlab.svg',
+          link: 'https://Gitlab',
+        },
+        {
+          grupo: 'VCS',
+          title: 'Sourcetree',
+          foto: 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/313_Sourcetree_logo-512.png',
+          link: 'https://Sourcetree',
+        },
+        {
+          grupo: 'IDE',
+          title: 'NetBeans IDE',
+          foto: 'https://fabasoad.github.io/business-card/6d42640530b2868f22c242267d4c98a5.png',
+          link: 'https://netbeans.apache.org/download/index.html',
+        },
+        {
+          grupo: 'IDE',
+          title: '.NET',
+          foto: 'https://profilinator.rishav.dev/skills-assets/dot-net-original-wordmark.svg',
+          link: 'https://.NET',
+        },
+        {
+          grupo: 'IDE',
+          title: 'Visual Studio',
+          foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/langfr-220px-Visual_Studio_Icon_2019.svg.png',
+          link: 'https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Enterprise&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false',
+        },
+        {
+          grupo: 'IDE',
+          title: 'Visual Studio Code',
+          foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/512px-Visual_Studio_Code_1.18_icon.svg.png',
+          link: 'https://code.visualstudio.com/',
+        },
+        {
+          grupo: 'Design',
+          title: 'Figma',
+          foto: 'https://profilinator.rishav.dev/skills-assets/figma-icon.svg',
+          link: 'https://www.figma.com/downloads/',
+        },
+        {
+          grupo: 'Design',
+          title: 'Sketch',
+          foto: 'https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg',
+          link: 'https://www.sketch.com/',
+        },
+        {
+          grupo: 'Design',
+          title: 'Diagrams.net',
+          foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Diagrams.net_Logo.svg/2048px-Diagrams.net_Logo.svg.png',
+          link: 'https://www.diagrams.net/',
+        },
+        {
+          grupo: 'Design',
+          title: 'adobexd',
+          foto: 'https://cdn.worldvectorlogo.com/logos/adobe-xd.svg',
+          link: 'https://adobexd/',
+        },
+        {
+          grupo: 'Design',
+          title: 'AdobeIllustrator',
+          foto: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Illustrator_CC_icon.png/492px-Illustrator_CC_icon.png',
+          link: 'https://www.adobe.com/la/products/illustrator/free-trial-download.html',
+        },
+        {
+          grupo: 'Design',
+          title: 'Photoshop',
+          foto: 'https://www.creativosonline.org/wp-content/uploads/2019/06/ps-830x830.jpg',
+          link: 'http://www.intercambiosvirtuales.org/software/adobe-photoshop-2020-v21-0-3-91-multilenguaje-espanol',
+        },
+        {
+          grupo: 'Design',
+          title: 'adobepremierepro',
+          foto: 'https://profilinator.rishav.dev/skills-assets/adobepremierepro.png',
+          link: 'https://www.adobepremierepro.com/',
+        },
+        {
+          grupo: 'Design',
+          title: 'blender',
+          foto: 'https://download.blender.org/branding/community/blender_community_badge_white.png',
+          link: 'https://www.blender.com/',
+        },
+        {
+          grupo: 'Server',
+          title: 'NGINX',
+          foto: 'https://profilinator.rishav.dev/skills-assets/nginx-original.svg',
+          link: 'https://nginx.org/en/download.html',
+        },
+        {
+          grupo: 'Server',
+          title: 'XAMPP',
+          foto: 'https://profilinator.rishav.dev/skills-assets/xampp.png',
+          link: 'https://www.apachefriends.org/es/download.html',
+        },
+        {
+          grupo: 'Server',
+          title: 'IIS',
+          foto: 'https://dexor.de/en/wp-content/uploads/sites/2/2022/04/iis.png',
+          link: 'https://IIS',
+        },
+        {
+          grupo: 'SO',
+          title: 'WINDOWS',
+          foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCjbGLxCOadiITVpiVIPk7gc7xxImfW9i8emfFEjhbrzqcWjQ9nWQJSfLb05ZCEmkGpAA&usqp=CAU',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'WINDOWS',
+          foto: 'https://www.pngmart.com/files/3/Windows-PNG-Free-Download-PNG-Image.png',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'WINDOWS',
+          foto: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aed615f-1f06-4cb6-b3f4-c62aadb6817e/dewekal-c3a511ae-c45e-4809-9a19-0a50f41a6212.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhZWQ2MTVmLTFmMDYtNGNiNi1iM2Y0LWM2MmFhZGI2ODE3ZVwvZGV3ZWthbC1jM2E1MTFhZS1jNDVlLTQ4MDktOWExOS0wYTUwZjQxYTYyMTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.IY4KRuGda1wtq4h8BUueEi5bmCFe8DGtmhnlYF_A_Ao',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'LINUX',
+          foto: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'APPLE',
+          foto: 'https://camo.githubusercontent.com/31c9b6524a4cb08d503d766b291441af68202f4c7ec3a35f745baa12242325b7/68747470733a2f2f63646e2e69636f6e73636f75742e636f6d2f69636f6e2f667265652f706e672d36342f6170706c652d313233372d313137343936332e706e67',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'MINIOS',
+          foto: 'https://img1.freepng.es/20180614/ufx/kisspng-computer-icons-windows-10-windows-10-5b22da3ea8f306.468163341529010750692.jpg',
+          link: '',
+        },
+
+        {
+          grupo: 'SO',
+          title: 'Driver',
+          foto: 'https://b.zol-img.com.cn/soft/6/376/cek66ErnOm9Y.png',
+          link: 'https://dm.weishi.360.cn/home.html',
+        },
+        {
+          grupo: 'SO',
+          title: 'Virtual box',
+          foto: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'VMWARE',
+          foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmmO180t1wXpImjgJigxo03sGxdbnnQWgOMvny3mK3c0U2MHcpmfthni6uIpDRS-3c_3A&usqp=CAU',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'parallels',
+          foto: 'https://www.parallels.com/fileadmin/res/img/about/brand/PDFM-icon.jpg',
+          link: '',
+        },
+        {
+          grupo: 'SO',
+          title: 'parallels',
+          foto: 'https://fasoftwaredev.files.wordpress.com/2014/02/logo-wine1.jpg?w=682',
+          link: '',
+        },
+        {
+          grupo: 'Testing',
+          title: 'cucumber',
+          foto: 'https://testing.bzh/wp-content/uploads/2021/02/Cucumber.png',
+          link: 'https://mvnrepository.com/artifact/io.cucumber/cucumber-java/7.3.4',
+        },
+        {
+          grupo: 'Testing',
+          title: 'junit',
+          foto: 'https://avatars.githubusercontent.com/u/874086?s=280&v=4',
+          link: 'https://mvnrepository.com/artifact/junit/junit/4.13.2',
+        },
+        {
+          grupo: 'Testing',
+          title: 'mocha',
+          foto: 'https://www.vectorlogo.zone/logos/mochajs/mochajs-icon.svg',
+          link: 'https://mocha',
+        },
+        {
+          grupo: 'Testing',
+          title: 'Mockito',
+          foto: 'https://www.cwiki.us/download/attachments/47843409/MockitoZH?version=1&modificationDate=1565833716000&api=v2',
+          link: 'https://mvnrepository.com/artifact/org.mockito/mockito-all/1.10.19',
+        },
+        {
+          grupo: 'Testing',
+          title: 'Swagger',
+          foto: 'https://redjar.com.ar/wp-content/uploads/2020/02/swagger-logo-A49F73BAF4-seeklogo.com_-1.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Testing',
+          title: 'Postman',
+          foto: 'https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg',
+          link: 'https://www.postman.com/downloads/',
+        },
+        {
+          grupo: 'Testing',
+          title: 'insomnia',
+          foto: 'https://seeklogo.com/images/I/insomnia-logo-A35E09EB19-seeklogo.com.png',
+          link: 'https://insomnia.rest/download',
+        },
+        {
+          grupo: 'Online Support',
+          title: 'Microsoft_Teams',
+          foto: 'https://almonacid.cl/wp-content/uploads/2020/06/Microsoft-Teams.jpg',
+          link: 'https://www.microsoft.com/es-ar/microsoft-teams/download-app#desktopAppDownloadregion',
+        },
+        {
+          grupo: 'Online Support',
+          title: 'zoom',
+          foto: 'https://www.silicon.es/wp-content/uploads/2022/04/zoom-png-logo-download-transparent-20-1.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Online Support',
+          title: 'teamviewer',
+          foto: 'https://rc.cegsoft.com/Content/images/teamviewer-logo.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Online Support',
+          title: 'Anydesk',
+          foto: 'https://s3.amazonaws.com//beta-img.b2bstack.net/uploads/production/product/product_image/16462/anydesk.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Contenerizacion',
+          title: 'powershell',
+          foto: 'https://profilinator.rishav.dev/skills-assets/powershell.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Contenerizacion',
+          title: 'Ubunto',
+          foto: 'https://seeklogo.com/images/U/ubuntu-logo-8B7C9ED4AD-seeklogo.com.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Contenerizacion',
+          title: 'Docker',
+          foto: 'https://profilinator.rishav.dev/skills-assets/docker-original-wordmark.svg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Contenerizacion',
+          title: 'xgnix',
+          foto: 'https://cdn-ak.f.st-hatena.com/images/fotolife/j/jsstudy/20190209/20190209153150.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Contenerizacion',
+          title: 'kubernetes',
+          foto: 'https://www.genit.com.ar/sites/default/files/2020-10/15%20Kubernetes_0.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'SmartPSS',
+          foto: 'https://ipvideo.od.ua/image/cache/catalog/Logotipy/smartpss-500x500.jpg',
+          link: 'http://dahuawiki.com/Template:SmartPSS',
+        },
+        {
+          grupo: 'IoT',
+          title: 'kubernetes',
+          foto: 'https://i.pinimg.com/736x/ac/d2/45/acd24573e85da0f459cc2c102c74864d.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'kubernetes',
+          foto: 'https://adixcorp.com/wp-content/uploads/2017/07/hikvision-logo-300x133.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'TP-Link',
+          foto: 'https://www.redeszone.net/app/uploads-redeszone.net/2017/05/TP-Link-Tether.jpg?x=480&y=375&quality=40',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'linksys',
+          foto: 'https://m.media-amazon.com/images/S/aplus-media/mg/20cc7778-e318-45d9-b797-6288c23e4885._SL220__.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'tenda',
+          foto: 'https://macrotics.com/wp-content/uploads/2020/12/tenda.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'Mercusys',
+          foto: 'https://mvelectronica.s3.us-east-2.amazonaws.com/multimediamarcas/60df97a4878b7.webp',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'mikrotik',
+          foto: 'https://freesvg.org/img/winbox-mikrotik-icon.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'NEXXT',
+          foto: 'https://pbs.twimg.com/profile_images/1054832145447956480/3kbGWsBI_400x400.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'ZKTeco',
+          foto: 'https://m.media-amazon.com/images/S/abs-image-upload-na/9/AmazonStores/A1AM78C64UM0Y8/987259cbaf8d5e554b9422df93e51fe3.w1120.h1120.jpg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'forza',
+          foto: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmJ407djTywEg8AJryoymm5M1mNTpS5JtWV-xE0IO8PcoXYZ48ndMrWSGgCHb-Vcw4Irs&usqp=CAU',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'termixa epson',
+          foto: 'https://play-lh.googleusercontent.com/eV4_ckp3nMRhWpBHsc6Uq-9pfhCTiRBwsDgDycmM-Rad5uTnWi9u2ezQJ53igWNxOe8',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'raspberrypi',
+          foto: 'https://profilinator.rishav.dev/skills-assets/raspberrypi.png',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'IoT',
+          title: 'arduino',
+          foto: 'https://cdn.worldvectorlogo.com/logos/arduino-1.svg',
+          link: 'https://zoom.us/download',
+        },
+        {
+          grupo: 'Lint',
+          title: 'editorconfig',
+          foto: 'https://brunolm.files.wordpress.com/2017/01/editorconfig-stickers.png',
+          link: 'https://editorconfig',
+        },
+        {
+          grupo: 'Lint',
+          title: 'git hooks',
+          foto: 'https://miro.medium.com/max/450/0*FdEOeuX-mOMC3Ceu.png',
+          link: 'https://githooks',
+        },
+        {
+          grupo: 'Lint',
+          title: 'eslint',
+          foto: 'https://images.credly.com/images/e6eebd0c-6a17-4c06-b172-02ca9f6beb06/eslint.png',
+          link: 'https://eslint',
+        },
+        {
+          grupo: 'Lint',
+          title: 'sonarlint ',
+          foto: 'https://img.stackshare.io/service/9289/thumb_retina_tshDtvTW_400x400.png',
+          link: 'https://sonarlint ',
+        },
+        {
+          grupo: 'Lint',
+          title: 'prettier',
+          foto: 'https://prettier.io/icon.png',
+          link: 'https://prettier',
+        },
+
+      ];
+
+      // 4 formas de eliminar elementos duplicados en un arreglo con Javascript
+
+      const result = text.reduce((r, a) => {
+        if (!r.includes(a.grupo)) {
+          r.push(a.grupo);
+        }
+        return r;
+      }, []);
+
+      //recorrer array y crear un nuevo array con los elementos unicos
+
+      Object.keys(result).map((key) => {
+        var obj100 = result[key];
+        console.log(obj100);
+
+        document.getElementById(
+          'title'
+        ).innerHTML += `<h3> <em class="bi bi-link-45deg " style="font-size:25px"> </em> ${obj100}<h3> `;
+
+        let html10 = `   `;
+        html10 += ` <div class=""> `;
+        html10 += ` <div class="parent"> `;
+
+        Object.keys(text).map((key) => {
+          var obj = text[key];
+          if (obj.grupo == obj100) {
+            html10 += `<div class='box'> <a href="${obj.link}"  >
+						    <img src="${obj.foto}" width='100%' alt='${obj.title}' >
+							</a> </div>`;
+          }
+        });
+
+        html10 += `</div>`;
+        html10 += `</div>` + `</br>`;
+
+        document.getElementById('title').innerHTML += html10;
+      });
+
+      // creo array por grupo
+      // resultos = text.reduce(function (r, a) {
+      // 	r[a.grupo] = r[a.grupo] || [];
+      // 	r[a.grupo].push(a.grupo);
+      // 	return r;
+      // }, Object.create(null));
+      // console.log(resultos);
+
+      // document.getElementById("demotitle").innerHTML
+      // 	+= `<h2> ${result}<h2> ` + `</br>`;
+
+      // var arr = Object.values(text).filter(
+      // 	function (item, index) {
+      // 		return text.indexOf(item).grupo === index.grupo;
+      // 	})
+      // 	.map(function (item, index) {
+      // 		return item.grupo;
+      // 	}).filter(function (item, index, self) {
+      // 		return self.indexOf(item) === index;
+      // 	});
+      // console.log(arr);
+
+      // var arr = Object.values(text).filter(itm => itm.grupo == "Mobile");
+      // console.log(arr);
+    </script>
+  </body>
+</html>
