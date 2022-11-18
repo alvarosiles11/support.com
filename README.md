@@ -5,6 +5,7 @@
 <div style=" flex:1; border: 1px solid blue" >
 
 - <a href="?"><img height="20" src="https://cdn.jim-nielsen.com/macos/512/apple-developer-2020-07-01.png" /></a> Dev
+
   - <a href="https://brave.com/es/"><img height="20" src="https://www.ecured.cu/images/9/97/Bravebrowser.png" /></a> Brave
   - <a href="https://desktop.github.com/"><img height="20" src="https://desktop.github.com/images/desktop-icon.svg" /></a> GitHub Desktop
   - <a href="https://www.sourcetreeapp.com/"><img height="20" src="https://s3.amazonaws.com/s3.roaringapps.com/assets/icons/1561277508424-Source%20Tree.png" /></a> Sourcetree app
@@ -17,11 +18,7 @@
   - <a href="https://annystudio.com/software/colorpicker/#download"><img height="20" src="https://static.techspot.com/images2/downloads/topdownload/2016/03/colorpicker.png" /></a> Just Color Picker
   - <a href="https://responsively.app"><img height="20" src="https://responsively.app/assets/img/logo.svg" /></a> Responsively
 
-- <a href="?"><img height="20" src="https://logodix.com/logo/1024432.gif" /></a> Server
-    - <a href="https://www.apachefriends.org/es/index.html"><img height="20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCPJ8rOPRAduPnUrND4rgIYug_GFkc4a7uCdJbqJiwtn_UxwNmqBJKhTLYB_g6BaQN-Xo&usqp=CAU" /></a> IIS
-    - <a href="https://www.apachefriends.org/es/index.html"><img height="20" src="https://www.apachefriends.org/images/xampp-logo-ac950edf.svg" /></a> XAMPP
-    - <a href="https://www.digitalocean.com/"><img height="20" src="https://cdn.worldvectorlogo.com/logos/digitalocean.svg" /></a> digitalocean
-    - <a href="https://azure.microsoft.com/es-es/"><img height="20" src="https://www.imagar.com/wp-content/uploads/2018/06/azure.png" /></a> azure
+- <a href="?"><img height="20" src="https://logodix.com/logo/1024432.gif" /></a> Server - <a href="https://www.apachefriends.org/es/index.html"><img height="20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCPJ8rOPRAduPnUrND4rgIYug_GFkc4a7uCdJbqJiwtn_UxwNmqBJKhTLYB_g6BaQN-Xo&usqp=CAU" /></a> IIS - <a href="https://www.apachefriends.org/es/index.html"><img height="20" src="https://www.apachefriends.org/images/xampp-logo-ac950edf.svg" /></a> XAMPP - <a href="https://www.digitalocean.com/"><img height="20" src="https://cdn.worldvectorlogo.com/logos/digitalocean.svg" /></a> digitalocean - <a href="https://azure.microsoft.com/es-es/"><img height="20" src="https://www.imagar.com/wp-content/uploads/2018/06/azure.png" /></a> azure
 </div>
 <div style=" flex:1; border: 1px solid red; ">
 
@@ -92,3 +89,5 @@
 </div>
 
 <!-- https://camaras-espia.com.mx/blog/noticias/aplicaciones-espia-para-android/ -->
+
+ahi
